@@ -3,10 +3,10 @@ rm(list=ls()) # this can help
 
 #reading data
 # setwd (yourdirectory)
-elc<- read.table("household_power_consumption.txt", sep=";", header=TRUE, quote= "", strip.white=TRUE, stringsAsFactors = FALSE, na.strings= "?")
+data<- read.table("household_power_consumption.txt", sep=";", header=TRUE, quote= "", strip.white=TRUE, stringsAsFactors = FALSE, na.strings= "?")
 
 # Subsetting 
-sub<- subset(elc, (elc$Date == "1/2/2007" | elc$Date== "2/2/2007")) 
+sub<- subset(data, (data$Date == "1/2/2007" | data$Date== "2/2/2007")) 
 
 # Changing the class  
 sub$Date <- as.Date(sub$Date, format = "%d/%m/%Y")
