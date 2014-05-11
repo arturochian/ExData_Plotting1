@@ -12,7 +12,7 @@ sub<- subset(data, (data$Date == "1/2/2007" | data$Date== "2/2/2007"))
 # Changing the class 
 sub$Date <- as.Date(sub$Date, format = "%d/%m/%Y")
 
-# Combining the Date and Time variable and creating a new column in dataset named "DateTime":
+# Creating a new column in dataset named "DateTime":
 sub$DateTime <- as.POSIXct(paste(sub$Date, sub$Time))
 
 # plot3
