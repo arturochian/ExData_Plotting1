@@ -3,10 +3,10 @@ rm(list=ls()) # this can help
 
 #reading data
 # setwd (yourdirectory)
-elc<- read.table("household_power_consumption.txt", sep=";", header=TRUE, quote= "", strip.white=TRUE, stringsAsFactors = FALSE, na.strings= "?")
+data<- read.table("household_power_consumption.txt", sep=";", header=TRUE, quote= "", strip.white=TRUE, stringsAsFactors = FALSE, na.strings= "?")
 # dim(elc) a big data?
 # Subsetting 
-sub<- subset(elc, (elc$Date == "1/2/2007" | elc$Date== "2/2/2007")) 
+sub<- subset(data, (data$Date == "1/2/2007" | data$Date== "2/2/2007")) 
 
 # plot1
 png("plot1.png", width=480, height= 480)
